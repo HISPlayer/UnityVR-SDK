@@ -13,7 +13,7 @@ It’s required to set **UnityAudio** property in MultistreamProperties to True 
 </p>
 
 To get the audio data, you can choose either using **GetAudioData()** or **FillAudioData()** API. 
-Please refer to below APIs section and HISPlayer Meta Quest Spatial Audio Sample section.
+Please refer to below APIs section.
 
 ## Related APIs
 
@@ -78,14 +78,3 @@ The remaining AudioSource components follow this same routing logic based on the
 <p align="center">
     <img width=40% src="image.png">
 </p>
-
-## HISPlayer Meta Quest Spatial Audio Sample
-
-Please download the sample here: [HISPlayer_MetaQuest_SpatialAudio_Sample.unitypackage](https://downloads.hisplayer.com/Unity/Quest/HISPlayer_MetaQuest_OVROverlay_SpatialAudio_SampleV2.unitypackage) and import it to your Unity project.
-
-Before using the sample, make sure that you have imported HISPlayer SDK. If not, please follow the [**Quickstart Guide**](./setup-guide.md).
-
-The sample plays local video with 5 audio channels that are connected to 5 AudioSources. You may modify the sample depending on your audio channel count. 
-Please refer to the sample package which consists of the following Unity scenes in **HISPlayerSpatialAudioSample\Scenes**:
-- **HISPlayerFillAudioSample**: Sample utilizing **FillAudioData()** API by passing the float[] data from each Unity Audio Source **OnAudioFilterRead()** which the data buffer will be filled automatically. To check the APIs usage, please refer to all scripts in **HISPlayerSpatialAudioSample\Scripts\Sample\Audio\FillAudioSample**.
-- **HISPlayerGetAudioSample**: Sample utilizing **GetAudioData()** API in Unity Audio Source **OnAudioFilterRead()** for center channel, and the new audio data is shared to other channel classes. The new audio data will be copied to the float[] data of **OnAudioFilterRead()** for each channel. To check the APIs usage, please refer to all scripts in **HISPlayerSpatialAudioSample\Scripts\Sample\Audio\GetAudioSample**.
