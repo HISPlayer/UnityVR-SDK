@@ -1,5 +1,5 @@
 # Material / RawImage / RenderTexture Rendering Mode
-It is also possible to render the video to **Material**  / **RawImage** / **RenderTexture** without the recommended **externalSurface** render mode with OVR component.
+It is also possible to render the video to **Material**  / **RawImage** / **RenderTexture** without the recommended **externalSurface** render mode with compositor layer.
 
 ## <ins>Material</ins>
 Create a new Material from **Assets > Create > Material** and attach it to the GameObject that is going to be used as screen and to the stream controller component. 
