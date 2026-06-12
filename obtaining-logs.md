@@ -20,16 +20,3 @@ Alternatively, you can start it manually : **Window > Analysis > Android Logcat*
 <p align="center">
 <img src="https://hisplayer.github.io/UnityAndroid-SDK/assets/android-logcat-view.PNG">
 </p>
-
-## Meta Quest Developer Hub
-Alternative tool for Meta Quest is to use <a href="https://developer.oculus.com/documentation/unity/ts-odh/">Meta Quest Developer Hub</a>. 
-
-**Meta Quest Developer Hub > Device Manager > Device Logs**
-
-<p align="center">
-<img src="https://hisplayer.github.io/UnityAndroid-SDK/assets/oculus-developer-hub.PNG">
-</p>
-
-<p align="center">
-<img src="https://hisplayer.github.io/UnityAndroid-SDK/assets/oculus-log.png">
-</p>
