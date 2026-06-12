@@ -1,6 +1,6 @@
 # Ambisonics Audio
 
-HISPlayer SDK v5.0.0 and above supports Ambisonics audio with ambiX format from first order to 3rd order, and TBE format to capture sound in all directions. 
+HISPlayer SDK supports Ambisonics audio with ambiX format from first order to 3rd order, and TBE format to capture sound in all directions. 
 It supports headset rotation listener, so the ambisonics audio is locked to the game world when users move the headset around. 
 
 ## Requirements
@@ -18,7 +18,7 @@ It’s required to set **AmbisonicAudio** property in MultistreamProperties thro
 * Recommended audio sample rate is 48000Hz.
 * Multistream mode with ambisonics is not supported.
 
-For more details, please refer to below APIs section and HISPlayer Meta Quest Ambisonic Sample section.
+For more details, please refer to below APIs section.
 
 ## Related APIs
 
@@ -38,24 +38,3 @@ For more details, please refer to below APIs section and HISPlayer Meta Quest Am
    * **TBE_8Channels_2HeadLockedChannels**: 8 channels of hybrid TBE ambisonics and 2 channels of head-locked stereo audio
 
 **public HISPlayerAmbisonicAudio AmbisonicAudio**: Ambisonics audio supporting ambiX format from first order to 3rd order, and TBE format. Enabling Ambisonic will disable Unity Audio. It's set to None or disabled by default. To modify this value, please use the Editor.
-
-## HISPlayer Meta Quest Ambisonic Sample
-
-Before using the sample, make sure that you have imported HISPlayer SDK. If not, please follow the [**Quickstart Guide**](./setup-guide.md).
-
-Please download the sample here: [HISPlayerMetaQuestAmbisonicSample.unitypackage](https://downloads.hisplayer.com/Unity/Quest/HISPlayerMetaQuestAmbisonicSample.unitypackage) and import it to your Unity project.
-
-* Open **Assets\HISPlayerMetaQuestAmbisonicSample\Scenes\HISPlayerMetaQuestAmbisonicSample.unity**.
-* Import TextMeshPro. Go to Unity Window > TextMeshPro > Import TMP Essential Resources.
-* If you received a license key from HISPlayer, input the license key through the Inspector Unity window: **StreamController** GameObject > HISPlayerSample component > **License Key**
-* Open File > Build Settings > Add Open Scenes
-* Build and Run
-
-To check how to set up the SDK and API usage, please refer to Assets/HISPlayerMetaQuestAmbisonicSample/Scripts/Sample/HISPlayerSample.cs and StreamController GameObject in the Editor.
-
-The sample includes 3 local videos in StreamingAssets:
-* 3rd order ambisonics (16 channels) ambiX format
-* 2nd order ambisonics (9 channels) ambiX format
-* 8 channels + 2 channels head-locked stereo TBE format 
-
-By default the sample plays local video with 3rd order ambisonics (16 channels) ambiX format. 
