@@ -1,4 +1,4 @@
-- [HISPlayer Unity Meta Quest SDK](/introduction.md)
+- [HISPlayer Unity VR SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
 - [HISPlayer API](/hisplayer-api.md)
 - [DRM](/drm.md)
@@ -10,4 +10,3 @@
 - [Controlling ABR](/controlling-abr.md)
 - [Obtaining Logs](/obtaining-logs.md)
 - [Update the SDK](/update-the-sdk.md)
-- [Releases](/releases.md)
