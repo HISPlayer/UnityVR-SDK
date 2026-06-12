@@ -5,14 +5,6 @@ Encrypted content is prepared using an encryption server and stored in a content
 
 The HISPlayer SDK supports [Widevine DRM](https://www.widevine.com/solutions/widevine-drm) and provides an API to the users for usage of the MediaDRM module.
 
-Supported maximum DRM protected video resolutions:
- * DRM L1 (External Surface render mode)
-   * 3948 x 2220 for video with 16:9 aspect ratio
-   * 2960 x 2960 for video with 1:1 aspect ratio
- * DRM L3 (RawImage/Material/RenderTexture render mode)
-   * 7680 x 4320 for video with 16:9 aspect ratio
-   * 5760 x 5760 for video with 1:1 aspect ratio
-
 Use **Multi Stream Properties** to set the DRM fields. It is possible to add license keys both in the editor and from code (see AddStream and AddVideoContent in [HISPlayer API](/hisplayer-api.md) for more details):
 
 * <span style="color:blue">**Enable DRM**</span>: Check to enable DRM usage. When enabled, there should be one license key URI per content URL even though the content is clear (empty license key URI). This field will have effect during the AddVideoContent functionality.
