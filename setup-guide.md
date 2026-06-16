@@ -211,13 +211,6 @@ Next, please refer to the **SetUpExternalSurface()** function:
 
 It is necessary to call SetUpPlayer() before calling other APIs. This function initializes everything else that will be needed during the usage of HISPlayer APIs.
 
-### Non-DRM Video Playback
-If you are not playing a DRM protected content, please modify the **MultiStreamProperties** by unchecking the **Enable DRM** checkbox to disable DRM and remove all element from **Key Server URI** list.
-
-<p align="center">
-  <img width="50%" alt="image" src="https://github.com/user-attachments/assets/5da42bb6-30bc-47c1-b4ee-70b81775286e">
-</p>
-
 ### Stereoscopic Video Playback
 Refer to [**Stereoscopic Video**](./stereoscopic.md).
 
