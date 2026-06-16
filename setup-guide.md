@@ -142,7 +142,54 @@ To check how to set up the SDK and API usage, please refer to Assets/HISPlayerVR
 
 ## Sample Explanation and SDK Usage
 
-### Editor
+### Editor Setup
+
+The **RenderScreen** GameObject is a Quad that displays the video. Its components are configured automatically via script based on the selected render mode:
+
+- **Mesh Filter** – defines the Quad geometry.
+- **Mesh Renderer** – enabled when `RenderMode` is **not** `ExternalSurface` (i.e., for `RenderTexture` mode).
+- **Composition Layer** – enabled when `RenderMode` is `ExternalSurface` (provided by **XR Composition Layers**).
+- **Source Textures** – enabled when `RenderMode` is `ExternalSurface`; provides texture access for the composition layer.
+
+> **Note:** The script toggles these components automatically. You do not need to manually enable/disable them.
+
+#### RenderMode Selection
+
+In the HISPlayer multistream properties, set the **RenderMode** to **External Surface** or **RenderTexture**.  
+Go to **StreamController** GameObject > **HISPlayerSample** script > **MultiStreamProperties** > **Element 0** > **RenderMode**.
+
+<p align="center">
+  <img width="961" height="549" alt="image" src="https://github.com/user-attachments/assets/9287c833-feb6-4240-8c31-5955b36af33f" />
+</p>
+
+#### Scene Components
+
+The example scenes include the following key GameObjects and components:
+
+- **RenderScreen** – the video display surface (Quad with Mesh Filter, Mesh Renderer, Composition Layer, Source Textures).
+- **StreamController** – holds the `HISPlayerSample.cs` script. Here you configure the **license key**, video settings, and UI references.
+- **XR Interaction Manager** – acts as an intermediary between Interactors and Interactables in the scene. It is required for any XR interaction to function.
+- **XR Origin** – transforms XR tracking data into scene world space. It controls the attached camera to track the user’s headset and controllers. It typically contains:
+  - **Input Action Manager** – automatically enables or disables a list of Input Action Assets. Input actions must be enabled before they can be used.
+  - **XR Input Modality Manager** – automatically switches between hand tracking and motion controllers at runtime based on which input method is currently tracked.
+
+---
+
+### Scene-Specific Notes
+
+#### HEVC_8K Scene
+
+This scene demonstrates high-resolution video playback using `ExternalSurface` mode with the Composition Layer setup described above.
+
+#### 360° Scene
+
+**Important:** The 360° scene **does not work** in `ExternalSurface` mode due to limitations of the Android Surface API with equirectangular mesh projections.  
+
+For this scene, the **RenderScreen** GameObject only has a **Mesh Renderer** (no Composition Layer or Source Textures), and the Mesh Filter is a **Sphere**. You must not use `ExternalSurface` mode.
+
+#### Ambisonic Audio Scene
+
+For information about Ambisonic audio support, please refer to [Ambisonic](/ambisonic.md)
 
 ### Script
 
