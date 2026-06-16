@@ -173,8 +173,6 @@ The example scenes include the following key GameObjects and components:
   - **Input Action Manager** – automatically enables or disables a list of Input Action Assets. Input actions must be enabled before they can be used.
   - **XR Input Modality Manager** – automatically switches between hand tracking and motion controllers at runtime based on which input method is currently tracked.
 
----
-
 ### Scene-Specific Notes
 
 #### HEVC_8K Scene
@@ -221,10 +219,6 @@ If you are not playing a DRM protected content, please modify the **MultiStreamP
 <p align="center">
   <img width="50%" alt="image" src="https://github.com/user-attachments/assets/5da42bb6-30bc-47c1-b4ee-70b81775286e">
 </p>
-
-### 360 Degree Video Playback
-
-
 
 ### Stereoscopic Video Playback
 Refer to [**Stereoscopic Video**](./stereoscopic.md).
