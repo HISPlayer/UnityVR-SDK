@@ -123,10 +123,9 @@ Alternatively, you may set the Target API level to 34 or higher in the Unity pro
 <img src="https://github.com/user-attachments/assets/218dbe0e-96ea-4153-a8bf-6fe07e6933b3">
 </p>
 
- 
 ## 2.1 Import HISPlayer VR SDK Sample
 
-Please, download the sample here: [**OpenXRSample**](https://downloads.hisplayer.com/Unity/VR/HISPlayer_VR_SDK_Sample.unitypackage) (no need to download it if you have received it in the email). 
+Please, download the sample here: [**OpenXRSample**](https://downloads.hisplayer.com/Unity/VR/HISPlayer_OpenXR_Sample_1.0.0.unitypackage) (no need to download it if you have received it in the email). 
 
 Before using the sample, please make sure you have followed the above steps to set-up your Unity project for  and HISPlayer SDK. To use the sample, please follow these steps :
   - Configure OpenXR
@@ -144,44 +143,21 @@ To check how to set up the SDK and API usage, please refer to Assets/OpenXRSampl
 
 ### Editor Setup
 
-The **RenderScreen** GameObject is a Quad that displays the video. Its components are configured automatically via script based on the selected render mode:
+The **RenderScreen** GameObject is a Quad that displays the video.
 
-- **Mesh Filter** – defines the Quad geometry.
-- **Mesh Renderer** – enabled when `RenderMode` is **not** `ExternalSurface` (i.e., for `RenderTexture` mode).
-- **Composition Layer** – enabled when `RenderMode` is `ExternalSurface` (provided by **XR Composition Layers**).
-- **Source Textures** – enabled when `RenderMode` is `ExternalSurface`; provides texture access for the composition layer.
+To select the rendering mode, go to **StreamController** GameObject > **HISPlayerSample** script > **MultiStreamProperties** > **Element 0** > **RenderMode**. The script automatically enables or disables the required components from the **RenderScreen** based on your selection.
 
-> **Note:** The script toggles these components automatically. You do not need to manually enable/disable them.
-
-#### RenderMode Selection
-
-In the HISPlayer multistream properties, set the **RenderMode** to **External Surface** or **RenderTexture**.  
-Go to **StreamController** GameObject > **HISPlayerSample** script > **MultiStreamProperties** > **Element 0** > **RenderMode**.
-
-<p align="center">
-  <img width="961" height="549" alt="image" src="https://github.com/user-attachments/assets/9287c833-feb6-4240-8c31-5955b36af33f" />
-</p>
-
-#### Scene Components
-
-The example scenes include the following key GameObjects and components:
-
-- **RenderScreen** – the video display surface (Quad with Mesh Filter, Mesh Renderer, Composition Layer, Source Textures).
-- **StreamController** – holds the `HISPlayerSample.cs` script. Here you configure the **license key**, video settings, and UI references.
-- **XR Interaction Manager** – acts as an intermediary between Interactors and Interactables in the scene. It is required for any XR interaction to function.
-- **XR Origin** – transforms XR tracking data into scene world space. It controls the attached camera to track the user’s headset and controllers. It typically contains:
-  - **Input Action Manager** – automatically enables or disables a list of Input Action Assets. Input actions must be enabled before they can be used.
-  - **XR Input Modality Manager** – automatically switches between hand tracking and motion controllers at runtime based on which input method is currently tracked.
+For detailed setup instructions for each render mode, please refer to [**RenderModes**](/rendermodes.md).
 
 ### Scene-Specific Notes
 
 #### HEVC_8K Scene
 
-This scene demonstrates high-resolution video playback using `ExternalSurface` mode with the Composition Layer setup described above.
+This scene demonstrates high-resolution video playback using `ExternalSurface` mode.
 
 #### 360° Scene
 
-This scene demonstrates 360° video playback using **RenderTexture** mode. The `RenderScreen` GameObject uses a **Sphere** as its Mesh Filter and only has a **Mesh Renderer** (no Composition Layer or Source Textures). This is the recommended configuration for equirectangular projections.
+This scene demonstrates 360° video playback using **RenderTexture** mode. The `RenderScreen` GameObject uses a **Sphere** as its Mesh Filter and only has a **Mesh Renderer**. This is the recommended configuration for equirectangular projections.
 
 #### Ambisonic Audio Scene
 
@@ -202,12 +178,6 @@ public class HISPlayerSample : HISPlayerManager
     ...
 }
 ```
-
-Next, please refer to the **SetUpExternalSurface()** function:
-- Find the **CompositionLayer** component from the GameObject (**RenderScreen**) that we have created.
-- When the external surface object has been created (retrieved via `OpenXRLayerUtility.GetLayerAndroidSurfaceObject()`):
-  - Set the external surface to HISPlayer multistream properties's **externalSurface** object.
-  - Call **SetUpPlayer()** to initialize the player and load the stream.
 
 It is necessary to call SetUpPlayer() before calling other APIs. This function initializes everything else that will be needed during the usage of HISPlayer APIs.
 
