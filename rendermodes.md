@@ -56,9 +56,6 @@ private IEnumerator SetUpExternalSurface()
 
 The script uses the `OpenXRLayerUtility.GetLayerAndroidSurfaceObject()` method to obtain the native surface pointer from the `CompositionLayer` and assigns it to the `externalSurface` field before calling `SetUpPlayer()`.
 
-### Linear Color Space
-
-No additional shader changes are required for Composition Layer mode.
 
 ## RenderTexture
 
