@@ -153,11 +153,11 @@ For detailed setup instructions for each render mode, please refer to [**RenderM
 
 #### HEVC_8K Scene
 
-This scene demonstrates high-resolution video playback using `ExternalSurface` mode.
+This scene demonstrates high-resolution video playback using **ExternalSurface**  render mode.
 
 #### 360° Scene
 
-This scene demonstrates 360° video playback using **RenderTexture** mode. The `RenderScreen` GameObject uses a **Sphere** as its Mesh Filter and only has a **Mesh Renderer**. This is the recommended configuration for equirectangular projections.
+This scene demonstrates 360° video playback using **RenderTexture** render mode. The `RenderScreen` GameObject uses a **Sphere** as its Mesh Filter and only has a **Mesh Renderer**. This is the recommended configuration for equirectangular projections.
 
 #### Ambisonic Audio Scene
 
