@@ -65,16 +65,3 @@ The default speaker mode can be configured in Unity via: **Edit → Project Sett
 <p align="center">
     <img width=60% src="image-1.png">
 </p>
-
-### Sample Application Implementation
-Our sample application includes the **GetAudioSource.cs** and **FillAudioSource.cs** scripts to demonstrate this functionality.
-The sample is configured to use **Stereo** Speaker Mode and utilizes five separate AudioSource components (Center, Left, Right, Left Surround, Right Surround).
-
-Because the speaker mode is Stereo:
-The **Center AudioSource** needs to play through both the left and right speakers simultaneously. Therefore, its Input Channel Index is 0 (Center), and its Speaker Channel Indexes list is set to 0 (Left) and 1 (Right).
-For the **Left AudioSource**, the Input Channel Index is 1 (Left), and its Speaker Channel Indexes list contains only 0 (Left).
-The remaining AudioSource components follow this same routing logic based on their respective positions.
-
-<p align="center">
-    <img width=40% src="image.png">
-</p>
