@@ -11,9 +11,9 @@ Getting started with HISPlayer consists of implementing the following steps:
 
       1.4 Configure OpenXR
    
-3. HISPlayer VR SDK Sample
+2. HISPlayer OpenXR Sample
    
-    2.1 Import HISPlayer VR SDK Sample
+    2.1 Import HISPlayer OpenXR Sample
 
 ## 1.1 Import Unity Packages
 
@@ -123,14 +123,14 @@ Alternatively, you may set the Target API level to 34 or higher in the Unity pro
 <img src="https://github.com/user-attachments/assets/218dbe0e-96ea-4153-a8bf-6fe07e6933b3">
 </p>
 
-## 2.1 Import HISPlayer VR SDK Sample
+## 2.1 Import HISPlayer OpenXR Sample
 
 Please, download the sample here: [**OpenXRSample**](https://downloads.hisplayer.com/Unity/VR/HISPlayer_OpenXR_Sample_1.0.0.unitypackage) (no need to download it if you have received it in the email). 
 
 Before using the sample, please make sure you have followed the above steps to set-up your Unity project for  and HISPlayer SDK. To use the sample, please follow these steps :
   - Configure OpenXR
   - Import HISPlayer SDK
-  - Import HISPlayer VR SDK Sample
+  - Import HISPlayer OpenXR Sample
   - Open Assets/OpenXRSample/Scenes/HEVC_8K.unity
   - Import TextMeshPro. Go to Unity Window > TextMeshPro > Import TMP Essential Resources
   - If you received a license key from HISPlayer, input the license key through the Inspector Unity window: **StreamController GameObject > HISPlayerSample component > License Key**
