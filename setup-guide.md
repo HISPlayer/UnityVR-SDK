@@ -55,7 +55,7 @@ You must install a set of specific packages to ensure OpenXR and the VR interact
 Importing the SDK is the same as importing other normal packages in Unity. 
 Select the package of _HISPlayer SDK_ and import it.
 
-**Assets > Import Package > Custom Package > HISPlayer VR SDK unity package**
+**Assets > Import Package > Custom Package > HISPlayer XR SDK unity package**
 
 Select the package of _HISPlayer SDK_ and import it.
 
@@ -125,7 +125,7 @@ Alternatively, you may set the Target API level to 34 or higher in the Unity pro
 
 ## 2.1 Import HISPlayer OpenXR Sample
 
-Please, download the sample here: [**OpenXRSample**](https://downloads.hisplayer.com/Unity/VR/HISPlayer_OpenXR_Sample_1.0.0.unitypackage) (no need to download it if you have received it in the email). 
+Please, download the sample here: [**OpenXRSample**](https://downloads.hisplayer.com/Unity/XR/HISPlayer_OpenXR_Sample_1.0.0.unitypackage) (no need to download it if you have received it in the email). 
 
 Before using the sample, please make sure you have followed the above steps to set-up your Unity project for  and HISPlayer SDK. To use the sample, please follow these steps :
   - Configure OpenXR
