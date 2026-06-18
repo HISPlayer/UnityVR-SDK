@@ -1,4 +1,4 @@
-- [HISPlayer Unity VR SDK](/introduction.md)
+- [HISPlayer Unity XR SDK](/introduction.md)
 - [Quickstart Guide](/setup-guide.md)
 - [HISPlayer API](/hisplayer-api.md)
 - [DRM](/drm.md)
