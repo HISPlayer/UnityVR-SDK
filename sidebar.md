@@ -10,3 +10,4 @@
 - [Controlling ABR](/controlling-abr.md)
 - [Obtaining Logs](/obtaining-logs.md)
 - [Update the SDK](/update-the-sdk.md)
+- [Releases](/releases.md)

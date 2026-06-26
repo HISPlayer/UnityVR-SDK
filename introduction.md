@@ -28,7 +28,8 @@ HISPlayer is the most advanced video streaming player for Unity, supporting loca
 
 ### Subtitles
   * CEA-608
-  * WebVTT
+  * WebVTT (External subtitle support)
+  * SRT (External subtitle support)
 
 ### Supported Local Formats
 * MP4
