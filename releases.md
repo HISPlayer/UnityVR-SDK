@@ -3,6 +3,7 @@
 ### Version 5.8.1
 ##### July 2, 2026
 - [**Improvement**] Improved high resolution selection when using DRM L3 with RawImage/Material/RenderTexture.
+- [**Improvement**] Fixed macOS plugin not found on some devices.
 
 ### Version 5.8.0
 ##### June 30, 2026
